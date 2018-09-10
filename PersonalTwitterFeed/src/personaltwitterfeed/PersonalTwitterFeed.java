@@ -21,7 +21,13 @@ public class PersonalTwitterFeed {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        String[] tweets = new String[MAX_NUMBER_TWEETS];
+        String [] tweets = null;
+        newTweet(tweets);
+    }
+    
+    public static void newTweet(String[] tweets)
+    {
+        tweets = new String[MAX_NUMBER_TWEETS];
         String date = null;
         Scanner keyboard = new Scanner(System.in);
         System.out.println("Welcome to your personal Twitter!");
@@ -56,6 +62,7 @@ public class PersonalTwitterFeed {
         System.out.println("Your twitter feed is full");
     }
     
+    
     public static void getCurrentTimeStamp(String date)
     {
         date = "yy-MM-dd";
@@ -63,5 +70,5 @@ public class PersonalTwitterFeed {
         String timeStamp = simpleDateFormat.format(new Date());
         System.out.println(timeStamp);
     }
-    
 }
+
